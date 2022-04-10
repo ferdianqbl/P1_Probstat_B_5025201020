@@ -173,7 +173,7 @@ hist(data, main = text)
 ### C.
 > dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
 
-
+Berdasarkan poin A, peluang eksponensial dari 6 bayi lahir adalah 0.128 pada setiap harinya. Sedangkan dari peluang tersebut, diperoleh banyaknya bayi lahir 6 orang per harinya selama setahun adalah antara 20 - 50 kali
 
 ### D.
 > Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson
