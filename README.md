@@ -78,3 +78,58 @@ Rataan dapat diperoleh dari hasil 1 / besar peluang sukses. Sedangkan, Varian da
 ***
 
 ## **Soal 2**
+Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
+
+``` R
+# MAIN FUNCTION
+comb = function(n, x) {
+  factorial(n) / factorial(n-x) / factorial(x)
+}
+
+formula = function(n, n_success, n_fail, p_success, p_fail){
+  return (comb(n, n_success)*(p_success^n_success)*(p_fail^(n-n_success)))
+}
+```
+### A.
+> Peluang terdapat 4 pasien yang sembuh
+
+``` R
+# A
+n = 20
+n_success = 4
+n_fail = n - n_success
+p_success = 0.2
+p_fail = 1 - p_success
+
+print(paste("Peluang = ", formula(n, n_success, n_fail, p_success, p_fail)), quote=FALSE)
+```
+
+![2A](screenshots/2A.jpg)
+
+Peluang dapat dicari dengan mengetahui hasil dari kombinasi antara n dan n_success dikali dengan peluang sukses pangkat jumlah pasien sembuh dikali dengan peluang gagal pangkat jumlah pasien yang tidak sembuh
+
+### B.
+> Gambarkan grafik histogram berdasarkan kasus tersebut
+
+``` R 
+# B
+n_of_success <- append(rep(c(1), n_success), rep(c(0), n_fail))
+hist(n_of_success, breaks = 2, xaxp = c(0,1,1), ylim = c(0,n), yaxp = c(0, n, n), main = "2B", xlab = "succeed")
+```
+![2B](screenshots/2B.jpg)
+
+### C.
+> Nilai Rataan (μ) dan Varian (σ²) dari DistribusiBinomial
+
+``` R
+# C
+Rataan = n * p_success
+Varian = n * p_success * p_fail
+
+print(paste("Rataan = ", Rataan), quote=FALSE)
+print(paste("Varian = ", Varian), quote=FALSE)
+```
+
+![2C](screenshots/2C.jpg)
+
+Rataan diperoleh dari perkalian banyaknya pasien dengan peluang sembuh. Sedangkan, varian diperoleh dari perkalian Rataan dengan peluang gagal
