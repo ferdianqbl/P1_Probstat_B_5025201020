@@ -185,3 +185,48 @@ print(paste("Varian = ", Varian), quote=FALSE)
 ![3D](screenshots/3D.jpg)
 
 Rataan dan Varian untuk Distribusi Poisson adalah rata - rata historis.
+***
+
+## **Soal 4**
+Diketahui nilai x = 2 dan v = 10. Tentukan:
+
+### A.
+> Fungsi Probabilitas dari Distribusi Chi-Square.
+
+``` R
+# A
+x = 2
+v = 10
+print(paste("Probabilitas = ", dchisq(x, v)), quote=FALSE)
+```
+
+![4A](screenshots/4A.jpg)
+
+Probabilitas distribusi Chi_Square dapat dicari dengan menggunakan fungsi dchishq dengan argumen x = 2 dan v = 10
+
+### B.
+> Histogram dari Distribusi Chi-Square dengan 100 data random
+
+``` R
+# B
+n = 100
+data = rchisq(n, v)
+hist(data, xlab = "Sumbu x", ylab = "Sumbu y", main = "4B")
+```
+![4B](screenshots/4B.jpg)
+
+### C.
+> Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square
+
+``` R
+# C
+Rataan = v
+Varian = 2 * v
+print(paste("Rataan = ", Rataan), quote=FALSE)
+print(paste("Varian = ", Varian), quote=FALSE)
+```
+
+![4C](screenshots/4C.jpg)
+
+Nilai dari Rataan adalah v. Sedangkan varian adalah Rataan dikali 2.
+
