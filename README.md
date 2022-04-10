@@ -48,7 +48,7 @@ Mean dapat dicari dengan mencari distribusi geometrik untuk n data kemudian dica
 ### C.
 > Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 
-Berdasarkan hasil dari Poin A dan B, didapatkan hasil yang mirip dan tidak jauh berbeda, yaitu sekitar 0,
+
 
 ### D.
 > Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
@@ -184,4 +184,4 @@ print(paste("Varian = ", Varian), quote=FALSE)
 ```
 ![3D](screenshots/3D.jpg)
 
-Rataa dan Varian untuk Distribusi Poisson adalah rata - rata historis.
+Rataan dan Varian untuk Distribusi Poisson adalah rata - rata historis.
