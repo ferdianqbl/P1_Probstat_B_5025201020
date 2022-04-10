@@ -31,4 +31,50 @@ print(paste("Peluang = ", geom(x, p_success)), quote=FALSE)
 
 Peluang dapat dicari dengan mengalikan besar peluang berhasil dengan hasil dari besar peluang gagal pangkat x.
 
+### B.
+> mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 ).
 
+``` R
+# B
+n = 10000
+distGEO = rgeom(n, p_success)
+print(paste("Mean = ", mean(distGEO == 3)), quote=FALSE)
+```
+![1.a](screenshots/1B.jpg)
+
+Mean dapat dicari dengan mencari distribusi geometrik untuk n data kemudian dicari meannya untuk x = 3
+
+
+### C.
+> Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
+
+Berdasarkan hasil dari Poin A dan B, didapatkan hasil yang mirip dan tidak jauh berbeda, yaitu sekitar 0,
+
+### D.
+> Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
+
+``` R
+# D
+hist(distGEO, main = "1D")
+```
+
+![1.a](screenshots/1D.jpg)
+
+### E.
+> Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
+
+``` R
+# E
+Rataan = 1/p_success
+Varian = (1-p_success)/(p_success^2)
+print(paste("Rataan = ", Rataan), quote=FALSE)
+print(paste("Varian = ", Varian), quote=FALSE)
+```
+
+![1.a](screenshots/1E.jpg)
+
+Rataan dapat diperoleh dari hasil 1 / besar peluang sukses. Sedangkan, Varian dapat dicari dari besar peluang gagal dibagi peluang sukses pangkat 2
+
+***
+
+## **Soal 2**
