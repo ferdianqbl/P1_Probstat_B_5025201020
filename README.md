@@ -133,3 +133,55 @@ print(paste("Varian = ", Varian), quote=FALSE)
 ![2C](screenshots/2C.jpg)
 
 Rataan diperoleh dari perkalian banyaknya pasien dengan peluang sembuh. Sedangkan, varian diperoleh dari perkalian Rataan dengan peluang gagal
+
+***
+
+## **Soal 3**
+Diketahui data dari sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
+
+### A.
+> Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?
+
+``` R
+# A
+ratHis = 4.5
+n = 6
+pois = function(ratHis, n){
+  return ((exp(-ratHis)* ratHis^n)/factorial(n))
+}
+
+print(paste("Peluang = ", pois(ratHis, n)), quote=FALSE)
+```
+
+![3A](screenshots/3A.jpg)
+
+Peluang dapat dicari dengan mencari exponensial dari (- rata - rata Historis). Lalu, dikalikan dengan rata-rata historis pangkat n (jumlah bayi lahir). Kemudian, dibagi dengan hasil faktorial n
+
+### B.
+> simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)
+
+``` R
+# B
+n = 6
+data = rpois(356, ratHis)
+text = "Histogram 3B"
+hist(data, main = text)
+```
+
+![3B](screenshots/3B.jpg)
+
+### C.
+> dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+### D.
+> Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson
+
+``` R
+# D
+Rataan = ratHis
+Varian = ratHis
+print(paste("Rataan = ", Rataan), quote=FALSE)
+print(paste("Varian = ", Varian), quote=FALSE)
+```
+![3D](screenshots/3D.jpg)
+
+Rataa dan Varian untuk Distribusi Poisson adalah rata - rata historis.

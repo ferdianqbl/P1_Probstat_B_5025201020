@@ -17,7 +17,7 @@ print(paste("Peluang = ", formula(n, n_success, n_fail, p_success, p_fail)), quo
 
 # B
 n_of_success <- append(rep(c(1), n_success), rep(c(0), n_fail))
-hist(n_of_success, breaks = 2, xaxp = c(0,1,1), ylim = c(0,n), yaxp = c(0, n, n), main = "2B", xlab = "succeed")
+hist(n_of_success, breaks = 2, xaxp = c(0,1,1), ylim = c(0,n), yaxp = c(0, n, n), main = "2B", xlab = "Sumbu X")
 
 # C
 Rataan = n * p_success
