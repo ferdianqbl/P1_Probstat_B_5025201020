@@ -1,27 +1,27 @@
 {
-    "id": "A3DECE78",
-    "path": "C:/College/_SEMESTER 4/Probabilistic and Statistic/Praktikum 1/P1_Probstat_B_5025201020/soal4.R",
-    "project_path": "soal4.R",
+    "id": "BA201BA3",
+    "path": "C:/College/_SEMESTER 4/Probabilistic and Statistic/Praktikum 1/P1_Probstat_B_5025201020/soal6.R",
+    "project_path": "soal6.R",
     "type": "r_source",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1649570078031.0,
+    "created": 1649581271771.0,
     "source_on_save": false,
-    "relative_order": 4,
+    "relative_order": 2,
     "properties": {
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "10,0",
-        "scrollLine": "4"
+        "cursorPosition": "13,0",
+        "scrollLine": "3"
     },
     "folds": "",
-    "lastKnownWriteTime": 1649570473,
+    "lastKnownWriteTime": 1649584840,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1649570473092,
+    "last_content_update": 1649584840,
     "read_only": false,
     "read_only_alternatives": []
 }

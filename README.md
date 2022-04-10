@@ -48,7 +48,7 @@ Mean dapat dicari dengan mencari distribusi geometrik untuk n data kemudian dica
 ### C.
 > Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 
-
+Berdasarkan hasil peluang pada poin A, yaitu 0.1024 dan hasil Mean pada poin B, yaitu 0.1008, dapat disimpulkan bahwa peluang distribusi geometrik memiliki nilai yang hampir sama atau mirip dengan nilai Meannya.
 
 ### D.
 > Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama
@@ -172,6 +172,9 @@ hist(data, main = text)
 
 ### C.
 > dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
+
+
+
 ### D.
 > Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson
 
@@ -230,3 +233,104 @@ print(paste("Varian = ", Varian), quote=FALSE)
 
 Nilai dari Rataan adalah v. Sedangkan varian adalah Rataan dikali 2.
 
+***
+
+## **Soal 5**
+Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
+
+### A.
+> Fungsi Probabilitas dari Distribusi Exponensial
+
+``` R
+# A
+lambda = 3
+# fungsi umum
+distExp = function(lambda, target){
+  return(lambda * exp(-1 * lambda * target))
+}
+
+print(paste("Distribusi Eksponensial = ", dexp(lambda)), quote = FALSE) # jika menggunakan fungsi built in
+```
+
+![5A](screenshots/5A.jpg)
+
+Fungsi umum dari distribusi ini adlaah lambda dikali eksponensial dari -lambda * target. Namun, apabila menggunakan fungsi built in diperoleh hasil 0.0498
+
+### B.
+> Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
+
+``` R
+# B
+set.seed(1)
+hist(rexp(10, rate = lambda), xaxp = c(0,5,10), main = "10 Data Random")
+hist(rexp(100, rate = lambda), xaxp = c(0,5,10), main = "100 Data Random")
+hist(rexp(1000, rate = lambda), xaxp = c(0,5,10), main = "1000 Data Random")
+hist(rexp(10000, rate = lambda), xaxp = c(0,5,10), main = "10000 Data Random")
+```
+![5A](screenshots/5B1.jpg)
+![5A](screenshots/5B2.jpg)
+![5A](screenshots/5B3.jpg)
+![5A](screenshots/5B4.jpg)
+
+### C.
+> Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3
+  > - Gunakan set.seed(1)
+  > - Gunakan fungsi bawaan R
+
+``` R
+# C
+n = 100
+data = rexp(n, lambda)
+
+print(paste("Rataan = ", mean(data)), quote=FALSE)
+print(paste("Varian = ", var(data)), quote=FALSE)
+```
+![5C](screenshots/5C.jpg)
+
+Rataan dan varian dapat diperoleh dengan fungsi mean dan var dari hasil rexp(n, lambda)
+
+***
+
+## **Soal 6**
+ Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
+
+``` R
+n = 100
+mean = 50
+sd = 8
+
+```
+### A.
+> Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).
+
+``` R
+# A
+data = rnorm(n, mean, sd)
+zscore = (data - mean)/sd
+plot(data)
+
+print(paste("ZScore = ", zscore), quote=FALSE)
+```
+![6A](screenshots/6A.jpg)
+
+ZScore dapat dicari dengan rumus banyaknya data - nilai meannya. Kemudian, dibagi dengan standar deviasinya.
+
+### B.
+> Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan: NRP_Nama_Probstat_{Nama Kelas}_DNhistogram
+
+``` R
+# B
+hist(data, main = "5025201020_Muhammad Ferdian Iqbal_Probstat_B_DNhistogram")
+```
+![6B](screenshots/6B.jpg)
+
+### C.
+> Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.
+
+``` R
+# C
+print(paste("Varian = ", var(data)), quote = FALSE)
+```
+![6C](screenshots/6C.jpg)
+
+Nilai varian dapat diperoleh menggunakan fungsi var dengan argumen hasil dari rnorm(100, 50, 8)
